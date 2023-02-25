@@ -3,25 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39B4F09429A9D9EA00DA6B6D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4F09329A9D9EA00DA6B6D /* RootViewController.swift */; };
+		39B4F09829A9DA4300DA6B6D /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4F09729A9DA4300DA6B6D /* MainTabbarController.swift */; };
+		39B4F09B29A9DA6B00DA6B6D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4F09A29A9DA6B00DA6B6D /* HomeViewController.swift */; };
 		EEC2D140197E6C5924CE492E /* Pods_DaangnMarketClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28FA70C29304C16C9BE5C38 /* Pods_DaangnMarketClone.framework */; };
 		F81BAF4729A7225100E8761D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81BAF4629A7225100E8761D /* AppDelegate.swift */; };
-		F81BAF4929A7225100E8761D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81BAF4829A7225100E8761D /* SceneDelegate.swift */; };
-		F81BAF4B29A7225100E8761D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81BAF4A29A7225100E8761D /* ViewController.swift */; };
+		F81BAF4B29A7225100E8761D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81BAF4A29A7225100E8761D /* SplashViewController.swift */; };
 		F81BAF5029A7225300E8761D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F81BAF4F29A7225300E8761D /* Assets.xcassets */; };
 		F81BAF5329A7225300E8761D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F81BAF5129A7225300E8761D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39B4F09329A9D9EA00DA6B6D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		39B4F09729A9DA4300DA6B6D /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
+		39B4F09A29A9DA6B00DA6B6D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6BF0F83029071778FAE62952 /* Pods-DaangnMarketClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaangnMarketClone.release.xcconfig"; path = "Target Support Files/Pods-DaangnMarketClone/Pods-DaangnMarketClone.release.xcconfig"; sourceTree = "<group>"; };
 		E28FA70C29304C16C9BE5C38 /* Pods_DaangnMarketClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DaangnMarketClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81BAF4329A7225100E8761D /* DaangnMarketClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaangnMarketClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81BAF4629A7225100E8761D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F81BAF4829A7225100E8761D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F81BAF4A29A7225100E8761D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F81BAF4A29A7225100E8761D /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		F81BAF4F29A7225300E8761D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F81BAF5229A7225300E8761D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F81BAF5429A7225300E8761D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +50,42 @@
 				E28FA70C29304C16C9BE5C38 /* Pods_DaangnMarketClone.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		39B4F09229A9D9CB00DA6B6D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F81BAF4629A7225100E8761D /* AppDelegate.swift */,
+				39B4F09329A9D9EA00DA6B6D /* RootViewController.swift */,
+				F81BAF4A29A7225100E8761D /* SplashViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		39B4F09529A9D9F200DA6B6D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F81BAF4F29A7225300E8761D /* Assets.xcassets */,
+				F81BAF5129A7225300E8761D /* LaunchScreen.storyboard */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		39B4F09629A9DA1500DA6B6D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				39B4F09729A9DA4300DA6B6D /* MainTabbarController.swift */,
+				39B4F09929A9DA5900DA6B6D /* Home */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		39B4F09929A9DA5900DA6B6D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				39B4F09A29A9DA6B00DA6B6D /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		D673F8A93189DE4265D83812 /* Pods */ = {
@@ -78,11 +118,9 @@
 		F81BAF4529A7225100E8761D /* DaangnMarketClone */ = {
 			isa = PBXGroup;
 			children = (
-				F81BAF4629A7225100E8761D /* AppDelegate.swift */,
-				F81BAF4829A7225100E8761D /* SceneDelegate.swift */,
-				F81BAF4A29A7225100E8761D /* ViewController.swift */,
-				F81BAF4F29A7225300E8761D /* Assets.xcassets */,
-				F81BAF5129A7225300E8761D /* LaunchScreen.storyboard */,
+				39B4F09229A9D9CB00DA6B6D /* Common */,
+				39B4F09629A9DA1500DA6B6D /* Main */,
+				39B4F09529A9D9F200DA6B6D /* Utils */,
 				F81BAF5429A7225300E8761D /* Info.plist */,
 			);
 			path = DaangnMarketClone;
@@ -126,7 +164,7 @@
 				};
 			};
 			buildConfigurationList = F81BAF3E29A7225100E8761D /* Build configuration list for PBXProject "DaangnMarketClone" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -202,9 +240,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F81BAF4B29A7225100E8761D /* ViewController.swift in Sources */,
+				39B4F09B29A9DA6B00DA6B6D /* HomeViewController.swift in Sources */,
+				F81BAF4B29A7225100E8761D /* SplashViewController.swift in Sources */,
 				F81BAF4729A7225100E8761D /* AppDelegate.swift in Sources */,
-				F81BAF4929A7225100E8761D /* SceneDelegate.swift in Sources */,
+				39B4F09829A9DA4300DA6B6D /* MainTabbarController.swift in Sources */,
+				39B4F09429A9D9EA00DA6B6D /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +391,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -379,6 +420,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
