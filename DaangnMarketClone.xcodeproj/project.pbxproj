@@ -10,6 +10,9 @@
 		39B4F09429A9D9EA00DA6B6D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4F09329A9D9EA00DA6B6D /* RootViewController.swift */; };
 		39B4F09829A9DA4300DA6B6D /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4F09729A9DA4300DA6B6D /* MainTabbarController.swift */; };
 		39B4F09B29A9DA6B00DA6B6D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4F09A29A9DA6B00DA6B6D /* HomeViewController.swift */; };
+		39B4F0A029B2360800DA6B6D /* VillageLifeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4F09F29B2360800DA6B6D /* VillageLifeViewController.swift */; };
+		39B4F0A229B236B600DA6B6D /* BaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4F0A129B236B600DA6B6D /* BaseUIViewController.swift */; };
+		39B4F0A629B238E100DA6B6D /* VillageLifeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4F0A529B238E100DA6B6D /* VillageLifeTableViewCell.swift */; };
 		EEC2D140197E6C5924CE492E /* Pods_DaangnMarketClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28FA70C29304C16C9BE5C38 /* Pods_DaangnMarketClone.framework */; };
 		F81BAF4729A7225100E8761D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81BAF4629A7225100E8761D /* AppDelegate.swift */; };
 		F81BAF4B29A7225100E8761D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81BAF4A29A7225100E8761D /* SplashViewController.swift */; };
@@ -22,6 +25,9 @@
 		39B4F09329A9D9EA00DA6B6D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		39B4F09729A9DA4300DA6B6D /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
 		39B4F09A29A9DA6B00DA6B6D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		39B4F09F29B2360800DA6B6D /* VillageLifeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillageLifeViewController.swift; sourceTree = "<group>"; };
+		39B4F0A129B236B600DA6B6D /* BaseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIViewController.swift; sourceTree = "<group>"; };
+		39B4F0A529B238E100DA6B6D /* VillageLifeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillageLifeTableViewCell.swift; sourceTree = "<group>"; };
 		6BF0F83029071778FAE62952 /* Pods-DaangnMarketClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaangnMarketClone.release.xcconfig"; path = "Target Support Files/Pods-DaangnMarketClone/Pods-DaangnMarketClone.release.xcconfig"; sourceTree = "<group>"; };
 		E28FA70C29304C16C9BE5C38 /* Pods_DaangnMarketClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DaangnMarketClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81BAF4329A7225100E8761D /* DaangnMarketClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaangnMarketClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +66,7 @@
 				F81BAF4629A7225100E8761D /* AppDelegate.swift */,
 				39B4F09329A9D9EA00DA6B6D /* RootViewController.swift */,
 				F81BAF4A29A7225100E8761D /* SplashViewController.swift */,
+				39B4F0A129B236B600DA6B6D /* BaseUIViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -78,6 +85,7 @@
 			children = (
 				39B4F09729A9DA4300DA6B6D /* MainTabbarController.swift */,
 				39B4F09929A9DA5900DA6B6D /* Home */,
+				39B4F09E29B2358500DA6B6D /* VillageLife */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -89,6 +97,31 @@
 				F86800F029B1BA5D00BBBA28 /* PostingTableViewCell.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		39B4F09E29B2358500DA6B6D /* VillageLife */ = {
+			isa = PBXGroup;
+			children = (
+				39B4F09F29B2360800DA6B6D /* VillageLifeViewController.swift */,
+				39B4F0A329B238A100DA6B6D /* View */,
+				39B4F0A429B238A700DA6B6D /* ViewModel */,
+			);
+			path = VillageLife;
+			sourceTree = "<group>";
+		};
+		39B4F0A329B238A100DA6B6D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				39B4F0A529B238E100DA6B6D /* VillageLifeTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		39B4F0A429B238A700DA6B6D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D673F8A93189DE4265D83812 /* Pods */ = {
@@ -246,7 +279,10 @@
 				F86800F129B1BA5D00BBBA28 /* PostingTableViewCell.swift in Sources */,
 				39B4F09B29A9DA6B00DA6B6D /* HomeViewController.swift in Sources */,
 				F81BAF4B29A7225100E8761D /* SplashViewController.swift in Sources */,
+				39B4F0A029B2360800DA6B6D /* VillageLifeViewController.swift in Sources */,
 				F81BAF4729A7225100E8761D /* AppDelegate.swift in Sources */,
+				39B4F0A229B236B600DA6B6D /* BaseUIViewController.swift in Sources */,
+				39B4F0A629B238E100DA6B6D /* VillageLifeTableViewCell.swift in Sources */,
 				39B4F09829A9DA4300DA6B6D /* MainTabbarController.swift in Sources */,
 				39B4F09429A9D9EA00DA6B6D /* RootViewController.swift in Sources */,
 			);
