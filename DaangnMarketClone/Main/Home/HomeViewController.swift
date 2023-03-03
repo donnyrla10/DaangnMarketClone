@@ -10,11 +10,12 @@ import SwiftUI
 import SnapKit
 
 class HomeViewController: UIViewController {
+    let tableView = UITableView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //네비게이션 바 추가
         configureNavigationBar()
+        setUI()
     }
     
     private func configureNavigationBar() {
@@ -33,7 +34,7 @@ class HomeViewController: UIViewController {
             self.navigationItem.leftBarButtonItem = villageButton
         } else {
             let button: UIButton = {
-                var button = UIButton()
+                let button = UIButton()
                 button.titleLabel?.font = .systemFont(ofSize: 18, weight: .heavy)
                 button.setTitle("동네이름", for: .normal)
                 button.setTitleColor(.black, for: .normal)
@@ -67,6 +68,32 @@ class HomeViewController: UIViewController {
         self.navigationItem.rightBarButtonItems = [alarm, spacer, category, spacer, search]
     }
     
+    private func setUI() {
+        self.view.backgroundColor = .white
+        tableView.delegate = self
+        tableView.dataSource = self
+        self.view.addSubview(tableView)
+        tableView.snp.makeConstraints {
+            $0.top.bottom.equalToSuperview()
+            $0.leading.equalToSuperview()
+            $0.trailing.equalToSuperview()
+        }
+    }
+}
+
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let identifier = "\(indexPath)"
+        let cell = PostingTableViewCell.init(reuseIdentifier: identifier)
+        cell.titleLabel.text = "당근 판매합니다."
+        cell.postingImageView.image = UIImage(named: "DaangnIcon")
+        cell.selectionStyle = .none
+        return cell
+    }
 }
 
 //Previews ===============================================================
