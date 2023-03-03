@@ -15,6 +15,8 @@ class VillageLifeViewController: BaseUIViewController {
         tableView.dataSource = self
         tableView.backgroundColor = .white
         tableView.separatorInset = .zero
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 200
         return tableView
     }()
 
@@ -38,6 +40,10 @@ extension VillageLifeViewController: UITableViewDelegate, UITableViewDataSource 
         return 10
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifier = "\(indexPath.row)"
         
@@ -45,7 +51,7 @@ extension VillageLifeViewController: UITableViewDelegate, UITableViewDataSource 
             return reuseCell
         }
         
-        let cell = UITableViewCell.init(style: .default, reuseIdentifier: identifier)
+        let cell = VillageLifeTableViewCell.init(reuseIdentifier: identifier)
         
         return cell
     }
