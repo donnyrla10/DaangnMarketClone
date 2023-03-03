@@ -11,7 +11,37 @@ import SnapKit
 
 class HomeViewController: UIViewController {
     let tableView = UITableView()
-
+    let postingFloatingButton : UIButton = {
+        if #available(iOS 15.0, *) {
+            var config = UIButton.Configuration.plain()
+            var titleAttr = AttributedString.init("글쓰기")
+            titleAttr.font = .systemFont(ofSize: 18, weight: .heavy)
+            config.attributedTitle = titleAttr
+            config.image = UIImage(systemName: "plus")
+            config.imagePadding = 8
+            config.imagePlacement = .leading
+            config.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(pointSize: 14, weight: .semibold)
+            let button = UIButton(configuration: config)
+            button.layer.cornerRadius = 25
+            button.backgroundColor = .orange
+            button.tintColor = .white
+            button.layer.shadowRadius = 2
+            return button
+        }else {
+            let button = UIButton()
+            button.titleLabel?.font = .systemFont(ofSize: 18, weight: .heavy)
+            button.setTitle("글쓰기", for: .normal)
+            button.setTitleColor(.white, for: .normal)
+            button.setImage(UIImage(systemName: "plus"), for: .normal)
+            button.imageEdgeInsets = .init(top: 0, left: 0, bottom: 0, right: 10)
+            button.layer.cornerRadius = 25
+            button.backgroundColor = .orange
+            button.tintColor = .white
+            button.layer.shadowRadius = 2
+            return button
+        }
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationBar()
@@ -77,6 +107,13 @@ class HomeViewController: UIViewController {
             $0.top.bottom.equalToSuperview()
             $0.leading.equalToSuperview()
             $0.trailing.equalToSuperview()
+        }
+        self.view.addSubview(postingFloatingButton)
+        postingFloatingButton.snp.makeConstraints {
+            $0.trailing.equalToSuperview().offset(-20)
+            $0.bottom.equalToSuperview().offset(-100)
+            $0.width.equalTo(110)
+            $0.height.equalTo(50)
         }
     }
 }
