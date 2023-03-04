@@ -14,12 +14,19 @@ class MainTabbarController: UITabBarController {
         self.view.backgroundColor = .white
         
         let homeViewController = HomeViewController()
+        let villageLifeViewController = VillageLifeViewController()
         
         let homeNavigationController = UINavigationController(rootViewController: homeViewController)
+        let villageLifeNavigationController = UINavigationController(rootViewController: villageLifeViewController)
         
         let homeTabbarItem = UITabBarItem(title: "홈", image: UIImage(named: "tabbar_button_unselected_home"), selectedImage: UIImage(named: "tabbar_button_selected_home"))
         homeNavigationController.tabBarItem = homeTabbarItem
         
-        setViewControllers([homeNavigationController, UIViewController(),  UIViewController(), UIViewController(), UIViewController()], animated: true)
+        let villageLifeTabbarItem = UITabBarItem(title: "동네생활", image: UIImage(), selectedImage: UIImage())
+        villageLifeNavigationController.tabBarItem = villageLifeTabbarItem
+        
+        
+        
+        setViewControllers([homeNavigationController, villageLifeNavigationController,  UIViewController(), UIViewController(), UIViewController()], animated: true)
     }
 }
