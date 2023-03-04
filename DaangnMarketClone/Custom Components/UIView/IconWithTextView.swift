@@ -13,6 +13,7 @@ enum IconType {
     case people
 }
 
+/// 아이콘과 텍스트가 같이 있는 UIView
 class IconWithTextView: UIView {
     
     let iconImageView: UIImageView = {
