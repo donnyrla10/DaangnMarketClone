@@ -11,6 +11,9 @@ enum IconType {
     case comment
     case favorite
     case people
+    case heart
+    case chat
+    case message
 }
 
 /// 아이콘과 텍스트가 같이 있는 UIView
@@ -69,6 +72,12 @@ class IconWithTextView: UIView {
             iconImageView.image = UIImage.init(systemName: "hand.thumbsup")?.withRenderingMode(.alwaysTemplate)
         case .people:
             iconImageView.image = UIImage.init(systemName: "person.2")?.withRenderingMode(.alwaysTemplate)
+        case .heart:
+            iconImageView.image = UIImage.init(systemName: "heart")?.withRenderingMode(.alwaysTemplate)
+        case .message:
+            iconImageView.image = UIImage.init(systemName: "envelope")?.withRenderingMode(.alwaysTemplate)
+        case .chat:
+            iconImageView.image = UIImage.init(systemName: "bubble.left.and.bubble.right")?.withRenderingMode(.alwaysTemplate)
         }
     }
 }

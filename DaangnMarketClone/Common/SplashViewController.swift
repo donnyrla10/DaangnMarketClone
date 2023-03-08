@@ -8,12 +8,20 @@
 import UIKit
 
 class SplashViewController: UIViewController {
-
+    let daangnIconView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage.init(named: "DaangnIcon")
+        return imageView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .yellow
-        
-        
+        self.view.backgroundColor = .white
+        self.view.addSubview(daangnIconView)
+        daangnIconView.snp.makeConstraints {
+            $0.center.equalToSuperview()
+            $0.width.height.equalTo(64)
+        }
     }
 
     init(rootViewController: RootViewController) {
