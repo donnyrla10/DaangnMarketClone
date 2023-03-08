@@ -102,11 +102,10 @@ class HomeViewController: UIViewController {
         self.view.backgroundColor = .white
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorInset = .init(top: 0, left: 16, bottom: 0, right: 16)
         self.view.addSubview(tableView)
         tableView.snp.makeConstraints {
-            $0.top.bottom.equalToSuperview()
-            $0.leading.equalToSuperview()
-            $0.trailing.equalToSuperview()
+            $0.edges.equalToSuperview()
         }
         self.view.addSubview(postingFloatingButton)
         postingFloatingButton.snp.makeConstraints {
