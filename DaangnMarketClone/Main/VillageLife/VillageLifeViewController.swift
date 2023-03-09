@@ -17,7 +17,14 @@ class VillageLifeViewController: BaseUIViewController {
         tableView.separatorInset = .zero
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 200
+        tableView.tableHeaderView = villageLifeTableHeaderView
         return tableView
+    }()
+    
+    lazy var villageLifeTableHeaderView: VillageLifeTableHeaderView = {
+        let view = VillageLifeTableHeaderView()
+        view.categoryButtonAction = categoryButtonAction
+        return view
     }()
 
     override func viewDidLoad() {
@@ -32,6 +39,10 @@ class VillageLifeViewController: BaseUIViewController {
         villageLifeTableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+    }
+    
+    private func categoryButtonAction(_ sender: UIButton) {
+        print("button : \(sender.tag)")
     }
 }
 
