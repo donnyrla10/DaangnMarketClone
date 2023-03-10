@@ -124,7 +124,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifier = "\(indexPath)"
-        let cell = PostingTableViewCell.init(reuseIdentifier: identifier)
+        let cell = ItemTableViewCell.init(reuseIdentifier: identifier)
         cell.titleLabel.text = "당근 판매합니다."
         cell.postingImageView.image = UIImage(named: "DaangnIcon")
         cell.selectionStyle = .none

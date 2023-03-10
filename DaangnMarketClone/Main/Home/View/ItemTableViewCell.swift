@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PostingTableViewCell: UITableViewCell {
+class ItemTableViewCell: UITableViewCell {
     let titleLabel : UILabel = { //"iPhone 14 Pro 판매합니다."
         let title = UILabel()
         title.font = UIFont.systemFont(ofSize: 15)
