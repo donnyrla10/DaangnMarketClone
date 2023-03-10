@@ -43,6 +43,12 @@ class VillageLifeViewController: BaseUIViewController {
     
     private func categoryButtonAction(_ sender: UIButton) {
         print("button : \(sender.tag)")
+        
+        /// 주제
+        if sender.tag == 0 {
+            let bottomSheetView = BottomSheetView()
+            bottomSheetView.presentBottomSheetView()
+        }
     }
 }
 
