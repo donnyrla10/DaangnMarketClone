@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39ACE45729BB817D00DB7B1A /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ACE45629BB817D00DB7B1A /* UIView+Ex.swift */; };
 		39B4F09429A9D9EA00DA6B6D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4F09329A9D9EA00DA6B6D /* RootViewController.swift */; };
 		39B4F09829A9DA4300DA6B6D /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4F09729A9DA4300DA6B6D /* MainTabbarController.swift */; };
 		39B4F09B29A9DA6B00DA6B6D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4F09A29A9DA6B00DA6B6D /* HomeViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39ACE45629BB817D00DB7B1A /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
 		39B4F09329A9D9EA00DA6B6D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		39B4F09729A9DA4300DA6B6D /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
 		39B4F09A29A9DA6B00DA6B6D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				39C3B28C29B9B35B0067660F /* Common+Ex.swift */,
+				39ACE45629BB817D00DB7B1A /* UIView+Ex.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				39B4F0A229B236B600DA6B6D /* BaseUIViewController.swift in Sources */,
 				39C3B28A29B9B2710067660F /* BottomSheetView.swift in Sources */,
 				39C3B28D29B9B35B0067660F /* Common+Ex.swift in Sources */,
+				39ACE45729BB817D00DB7B1A /* UIView+Ex.swift in Sources */,
 				39B4F0A629B238E100DA6B6D /* VillageLifeTableViewCell.swift in Sources */,
 				39C3B28629B9A44E0067660F /* CategoryButton.swift in Sources */,
 				39B4F09829A9DA4300DA6B6D /* MainTabbarController.swift in Sources */,
