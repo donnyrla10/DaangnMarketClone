@@ -21,6 +21,8 @@ class PostingViewController: UIViewController {
             button.layer.cornerRadius = 25
             button.backgroundColor = .white
             button.tintColor = .black
+            
+            button.addTarget(self, action: #selector(cancelPostingButton), for: .touchUpInside)
             return button
         }else {
             let button = UIButton()
@@ -34,11 +36,12 @@ class PostingViewController: UIViewController {
         }
     }()
     
-    let background : UIView = {
-        let backgroundView = UIView()
-        backgroundView.backgroundColor = .black
-        backgroundView.alpha = 0.5
-        return backgroundView
+    lazy var background : UIButton = {
+        let backgroundButton = UIButton()
+        backgroundButton.backgroundColor = .black
+        backgroundButton.alpha = 0.6
+        backgroundButton.addTarget(self, action: #selector(cancelPostingButton), for: .touchUpInside)
+        return backgroundButton
     }()
     
     let myItemButton : UIButton = {
@@ -78,6 +81,10 @@ class PostingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+    }
+    
+    @objc func cancelPostingButton(_ sender: UIButton) {
+        self.presentingViewController?.dismiss(animated: false)
     }
     
     private func setUI() {
