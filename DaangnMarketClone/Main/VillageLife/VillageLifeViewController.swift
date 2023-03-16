@@ -26,6 +26,8 @@ class VillageLifeViewController: BaseUIViewController {
         view.categoryButtonAction = categoryButtonAction
         return view
     }()
+    
+    private let topicListVIew = TopicListView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +48,7 @@ class VillageLifeViewController: BaseUIViewController {
         
         /// 주제
         if sender.tag == 0 {
-            let bottomSheetView = BottomSheetView()
+            let bottomSheetView = BottomSheetView(contentView: topicListVIew)
             bottomSheetView.presentBottomSheetView()
         }
     }
