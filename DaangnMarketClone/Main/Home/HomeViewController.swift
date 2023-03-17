@@ -14,9 +14,9 @@ class HomeViewController: UIViewController {
     let postingFloatingButton : UIButton = {
         if #available(iOS 15.0, *) {
             var config = UIButton.Configuration.plain()
-//            var titleAttr = AttributedString.init("글쓰기")
-//            titleAttr.font = .systemFont(ofSize: 18, weight: .heavy)
-//            config.attributedTitle = titleAttr
+            var titleAttr = AttributedString.init("글쓰기")
+            titleAttr.font = .systemFont(ofSize: 18, weight: .heavy)
+            config.attributedTitle = titleAttr
             config.image = UIImage(systemName: "plus")
             config.imagePadding = 8
             config.imagePlacement = .leading
@@ -26,13 +26,12 @@ class HomeViewController: UIViewController {
             button.backgroundColor = .orange
             button.tintColor = .white
             button.layer.shadowRadius = 2
-            
             button.addTarget(self, action: #selector(selectPostingButton), for: .touchUpInside)
             return button
         }else {
             let button = UIButton()
             button.titleLabel?.font = .systemFont(ofSize: 18, weight: .heavy)
-//            button.setTitle("글쓰기", for: .normal)
+            button.setTitle("글쓰기", for: .normal)
             button.setTitleColor(.white, for: .normal)
             button.setImage(UIImage(systemName: "plus"), for: .normal)
             button.imageEdgeInsets = .init(top: 0, left: 0, bottom: 0, right: 10)
@@ -51,7 +50,18 @@ class HomeViewController: UIViewController {
     }
     
     @objc func selectPostingButton(_ sender: UIButton) {
-//        self.postingFloatingButton.isHidden = true //animation으로 동그랗게 변함
+        postingFloatingButton.titleLabel!.text == "글쓰기" ? postingFloatingButton.setTitle("", for: .normal) : postingFloatingButton.setTitle("글쓰기", for: .normal)
+        UIView.animate(withDuration: 0.2) {
+            self.postingFloatingButton.snp.updateConstraints {
+                if self.postingFloatingButton.titleLabel!.text != "글쓰기" {
+                    $0.width.equalTo(110)
+                }else {
+                    $0.width.equalTo(50)
+                }
+            }
+            self.postingFloatingButton.superview!.layoutIfNeeded()
+        }
+        
         let postingViewController = PostingViewController()
         postingViewController.modalPresentationStyle = .overCurrentContext
         self.present(postingViewController, animated: false)
@@ -120,8 +130,8 @@ class HomeViewController: UIViewController {
         postingFloatingButton.snp.makeConstraints {
             $0.trailing.equalToSuperview().offset(-20)
             $0.bottom.equalToSuperview().offset(-100)
-//            $0.width.equalTo(110)
-            $0.width.height.equalTo(50)
+            $0.width.equalTo(110)
+            $0.height.equalTo(50)
         }
     }
 }
