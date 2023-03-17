@@ -62,7 +62,7 @@ class HomeViewController: UIViewController {
             self.postingFloatingButton.superview!.layoutIfNeeded()
         }
         
-        let postingViewController = PostingViewController()
+        let postingViewController = FloatingButtonViewController()
         postingViewController.modalPresentationStyle = .overCurrentContext
         self.present(postingViewController, animated: false)
     }

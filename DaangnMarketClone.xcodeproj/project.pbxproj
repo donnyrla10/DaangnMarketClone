@@ -25,7 +25,8 @@
 		F81BAF5029A7225300E8761D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F81BAF4F29A7225300E8761D /* Assets.xcassets */; };
 		F81BAF5329A7225300E8761D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F81BAF5129A7225300E8761D /* LaunchScreen.storyboard */; };
 		F86800F129B1BA5D00BBBA28 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86800F029B1BA5D00BBBA28 /* ItemTableViewCell.swift */; };
-		F8B5F9B129BAE34400638103 /* PostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B5F9B029BAE34400638103 /* PostingViewController.swift */; };
+		F89E700E29C4A579007A00C3 /* PostingItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89E700D29C4A579007A00C3 /* PostingItemViewController.swift */; };
+		F8B5F9B129BAE34400638103 /* FloatingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B5F9B029BAE34400638103 /* FloatingButtonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +51,8 @@
 		F81BAF5229A7225300E8761D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F81BAF5429A7225300E8761D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F86800F029B1BA5D00BBBA28 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
-		F8B5F9B029BAE34400638103 /* PostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingViewController.swift; sourceTree = "<group>"; };
+		F89E700D29C4A579007A00C3 /* PostingItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingItemViewController.swift; sourceTree = "<group>"; };
+		F8B5F9B029BAE34400638103 /* FloatingButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonViewController.swift; sourceTree = "<group>"; };
 		FB58295250B9DB4DFA274626 /* Pods-DaangnMarketClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaangnMarketClone.debug.xcconfig"; path = "Target Support Files/Pods-DaangnMarketClone/Pods-DaangnMarketClone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,7 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				39B4F09A29A9DA6B00DA6B6D /* HomeViewController.swift */,
-				F8B5F9B029BAE34400638103 /* PostingViewController.swift */,
+				F8B5F9B029BAE34400638103 /* FloatingButtonViewController.swift */,
+				F89E700D29C4A579007A00C3 /* PostingItemViewController.swift */,
 				F8B5F9AF29BAE2D100638103 /* View */,
 			);
 			path = Home;
@@ -340,7 +343,7 @@
 				39C3B28329B24B3D0067660F /* IconWithTextView.swift in Sources */,
 				F86800F129B1BA5D00BBBA28 /* ItemTableViewCell.swift in Sources */,
 				39B4F09B29A9DA6B00DA6B6D /* HomeViewController.swift in Sources */,
-				F8B5F9B129BAE34400638103 /* PostingViewController.swift in Sources */,
+				F8B5F9B129BAE34400638103 /* FloatingButtonViewController.swift in Sources */,
 				F81BAF4B29A7225100E8761D /* SplashViewController.swift in Sources */,
 				39C3B28829B9A86F0067660F /* VillageLifeTableHeaderView.swift in Sources */,
 				39B4F0A029B2360800DA6B6D /* VillageLifeViewController.swift in Sources */,
@@ -352,6 +355,7 @@
 				39B4F0A629B238E100DA6B6D /* VillageLifeTableViewCell.swift in Sources */,
 				39C3B28629B9A44E0067660F /* CategoryButton.swift in Sources */,
 				39B4F09829A9DA4300DA6B6D /* MainTabbarController.swift in Sources */,
+				F89E700E29C4A579007A00C3 /* PostingItemViewController.swift in Sources */,
 				39B4F09429A9D9EA00DA6B6D /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
