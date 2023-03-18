@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		396ECB9929C35F6700ACE29E /* TopicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ECB9829C35F6700ACE29E /* TopicListView.swift */; };
+		396ECB9B29C3699800ACE29E /* JoinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ECB9A29C3699800ACE29E /* JoinButton.swift */; };
 		39ACE45729BB817D00DB7B1A /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ACE45629BB817D00DB7B1A /* UIView+Ex.swift */; };
 		39B4F09429A9D9EA00DA6B6D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4F09329A9D9EA00DA6B6D /* RootViewController.swift */; };
 		39B4F09829A9DA4300DA6B6D /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4F09729A9DA4300DA6B6D /* MainTabbarController.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		396ECB9829C35F6700ACE29E /* TopicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicListView.swift; sourceTree = "<group>"; };
+		396ECB9A29C3699800ACE29E /* JoinButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinButton.swift; sourceTree = "<group>"; };
 		39ACE45629BB817D00DB7B1A /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
 		39B4F09329A9D9EA00DA6B6D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		39B4F09729A9DA4300DA6B6D /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 			children = (
 				39B4F0A529B238E100DA6B6D /* VillageLifeTableViewCell.swift */,
 				39C3B28729B9A86F0067660F /* VillageLifeTableHeaderView.swift */,
+				396ECB9829C35F6700ACE29E /* TopicListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				39C3B28529B9A44E0067660F /* CategoryButton.swift */,
+				396ECB9A29C3699800ACE29E /* JoinButton.swift */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -341,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39C3B28329B24B3D0067660F /* IconWithTextView.swift in Sources */,
+				396ECB9B29C3699800ACE29E /* JoinButton.swift in Sources */,
 				F86800F129B1BA5D00BBBA28 /* ItemTableViewCell.swift in Sources */,
 				39B4F09B29A9DA6B00DA6B6D /* HomeViewController.swift in Sources */,
 				F8B5F9B129BAE34400638103 /* FloatingButtonViewController.swift in Sources */,
@@ -349,6 +356,7 @@
 				39B4F0A029B2360800DA6B6D /* VillageLifeViewController.swift in Sources */,
 				F81BAF4729A7225100E8761D /* AppDelegate.swift in Sources */,
 				39B4F0A229B236B600DA6B6D /* BaseUIViewController.swift in Sources */,
+				396ECB9929C35F6700ACE29E /* TopicListView.swift in Sources */,
 				39C3B28A29B9B2710067660F /* BottomSheetView.swift in Sources */,
 				39C3B28D29B9B35B0067660F /* Common+Ex.swift in Sources */,
 				39ACE45729BB817D00DB7B1A /* UIView+Ex.swift in Sources */,
