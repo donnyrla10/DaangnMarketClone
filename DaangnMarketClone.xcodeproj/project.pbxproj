@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		396ECB9929C35F6700ACE29E /* TopicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ECB9829C35F6700ACE29E /* TopicListView.swift */; };
 		396ECB9B29C3699800ACE29E /* JoinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ECB9A29C3699800ACE29E /* JoinButton.swift */; };
+		396ECB9D29C8BD1D00ACE29E /* VillageLiftDummyData.json in Resources */ = {isa = PBXBuildFile; fileRef = 396ECB9C29C8BD1D00ACE29E /* VillageLiftDummyData.json */; };
+		396ECB9F29C8BD9000ACE29E /* VillageLife.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ECB9E29C8BD9000ACE29E /* VillageLife.swift */; };
 		39ACE45729BB817D00DB7B1A /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ACE45629BB817D00DB7B1A /* UIView+Ex.swift */; };
 		39B4F09429A9D9EA00DA6B6D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4F09329A9D9EA00DA6B6D /* RootViewController.swift */; };
 		39B4F09829A9DA4300DA6B6D /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4F09729A9DA4300DA6B6D /* MainTabbarController.swift */; };
@@ -33,6 +35,8 @@
 /* Begin PBXFileReference section */
 		396ECB9829C35F6700ACE29E /* TopicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicListView.swift; sourceTree = "<group>"; };
 		396ECB9A29C3699800ACE29E /* JoinButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinButton.swift; sourceTree = "<group>"; };
+		396ECB9C29C8BD1D00ACE29E /* VillageLiftDummyData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = VillageLiftDummyData.json; path = "DaangnMarketClone/Custom Components/UIButton/VillageLiftDummyData.json"; sourceTree = SOURCE_ROOT; };
+		396ECB9E29C8BD9000ACE29E /* VillageLife.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VillageLife.swift; path = "DaangnMarketClone/Custom Components/UIButton/VillageLife.swift"; sourceTree = SOURCE_ROOT; };
 		39ACE45629BB817D00DB7B1A /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
 		39B4F09329A9D9EA00DA6B6D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		39B4F09729A9DA4300DA6B6D /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 		39B4F0A429B238A700DA6B6D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				396ECB9C29C8BD1D00ACE29E /* VillageLiftDummyData.json */,
+				396ECB9E29C8BD9000ACE29E /* VillageLife.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -290,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F81BAF5329A7225300E8761D /* LaunchScreen.storyboard in Resources */,
+				396ECB9D29C8BD1D00ACE29E /* VillageLiftDummyData.json in Resources */,
 				F81BAF5029A7225300E8761D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +357,7 @@
 				F8B5F9B129BAE34400638103 /* PostingViewController.swift in Sources */,
 				F81BAF4B29A7225100E8761D /* SplashViewController.swift in Sources */,
 				39C3B28829B9A86F0067660F /* VillageLifeTableHeaderView.swift in Sources */,
+				396ECB9F29C8BD9000ACE29E /* VillageLife.swift in Sources */,
 				39B4F0A029B2360800DA6B6D /* VillageLifeViewController.swift in Sources */,
 				F81BAF4729A7225100E8761D /* AppDelegate.swift in Sources */,
 				39B4F0A229B236B600DA6B6D /* BaseUIViewController.swift in Sources */,
