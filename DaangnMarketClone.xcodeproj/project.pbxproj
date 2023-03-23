@@ -24,6 +24,8 @@
 		F81BAF4B29A7225100E8761D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81BAF4A29A7225100E8761D /* SplashViewController.swift */; };
 		F81BAF5029A7225300E8761D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F81BAF4F29A7225300E8761D /* Assets.xcassets */; };
 		F81BAF5329A7225300E8761D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F81BAF5129A7225300E8761D /* LaunchScreen.storyboard */; };
+		F83D8C6629CC1F0800B6F6F8 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83D8C6529CC1F0800B6F6F8 /* HomeModel.swift */; };
+		F83D8C6B29CC22A600B6F6F8 /* HomeDummyData.json in Resources */ = {isa = PBXBuildFile; fileRef = F83D8C6A29CC22A600B6F6F8 /* HomeDummyData.json */; };
 		F86800F129B1BA5D00BBBA28 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86800F029B1BA5D00BBBA28 /* ItemTableViewCell.swift */; };
 		F89E700E29C4A579007A00C3 /* PostingItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89E700D29C4A579007A00C3 /* PostingItemViewController.swift */; };
 		F8B5F9B129BAE34400638103 /* FloatingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B5F9B029BAE34400638103 /* FloatingButtonViewController.swift */; };
@@ -50,6 +52,8 @@
 		F81BAF4F29A7225300E8761D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F81BAF5229A7225300E8761D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F81BAF5429A7225300E8761D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F83D8C6529CC1F0800B6F6F8 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		F83D8C6A29CC22A600B6F6F8 /* HomeDummyData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HomeDummyData.json; sourceTree = "<group>"; };
 		F86800F029B1BA5D00BBBA28 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		F89E700D29C4A579007A00C3 /* PostingItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingItemViewController.swift; sourceTree = "<group>"; };
 		F8B5F9B029BAE34400638103 /* FloatingButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +212,7 @@
 		F81BAF4529A7225100E8761D /* DaangnMarketClone */ = {
 			isa = PBXGroup;
 			children = (
+				F83D8C6429CC1EF100B6F6F8 /* Model */,
 				39C3B28B29B9B3450067660F /* Extenstions */,
 				39B4F0AC29B24ACA00DA6B6D /* Custom Components */,
 				39B4F09229A9D9CB00DA6B6D /* Common */,
@@ -216,6 +221,15 @@
 				F81BAF5429A7225300E8761D /* Info.plist */,
 			);
 			path = DaangnMarketClone;
+			sourceTree = "<group>";
+		};
+		F83D8C6429CC1EF100B6F6F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F83D8C6529CC1F0800B6F6F8 /* HomeModel.swift */,
+				F83D8C6A29CC22A600B6F6F8 /* HomeDummyData.json */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F8B5F9AF29BAE2D100638103 /* View */ = {
@@ -288,6 +302,7 @@
 			files = (
 				F81BAF5329A7225300E8761D /* LaunchScreen.storyboard in Resources */,
 				F81BAF5029A7225300E8761D /* Assets.xcassets in Resources */,
+				F83D8C6B29CC22A600B6F6F8 /* HomeDummyData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +357,7 @@
 			files = (
 				39C3B28329B24B3D0067660F /* IconWithTextView.swift in Sources */,
 				F86800F129B1BA5D00BBBA28 /* ItemTableViewCell.swift in Sources */,
+				F83D8C6629CC1F0800B6F6F8 /* HomeModel.swift in Sources */,
 				39B4F09B29A9DA6B00DA6B6D /* HomeViewController.swift in Sources */,
 				F8B5F9B129BAE34400638103 /* FloatingButtonViewController.swift in Sources */,
 				F81BAF4B29A7225100E8761D /* SplashViewController.swift in Sources */,

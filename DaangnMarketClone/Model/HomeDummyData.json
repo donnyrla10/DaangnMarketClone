@@ -1,0 +1,92 @@
+[
+    {
+        "title": "타이틀1",
+        "image": "",
+        "location": "신림동",
+        "time": "1분 전",
+        "price": 50000,
+        "favorite": 5,
+        "chat": 0
+    },
+    {
+        "title": "타이틀2",
+        "image": "",
+        "location": "신림동",
+        "time": "10분 전",
+        "price": 1000,
+        "favorite": 2,
+        "chat": 4
+    },    
+    {
+        "title": "타이틀3",
+        "image": "",
+        "location": "신림동",
+        "time": "20분 전",
+        "price": 500000,
+        "favorite": 6,
+        "chat": 3
+    },    
+    {
+        "title": "타이틀4",
+        "image": "",
+        "location": "신림동",
+        "time": "1시간 전",
+        "price": 5000000,
+        "favorite": 0,
+        "chat": 0
+    },    
+    {
+        "title": "타이틀5",
+        "image": "",
+        "location": "신림동",
+        "time": "10시간 전",
+        "price": 200000,
+        "favorite": 10,
+        "chat": 4
+    },    
+    {
+        "title": "타이틀6",
+        "image": "",
+        "location": "신림동",
+        "time": "24분 전",
+        "price": 24000,
+        "favorite": 8,
+        "chat": 1
+    },    
+    {
+        "title": "타이틀7",
+        "image": "",
+        "location": "신림동",
+        "time": "2시간 전",
+        "price": 54000,
+        "favorite": 5,
+        "chat": 0
+    },
+    {
+        "title": "타이틀8",
+        "image": "",
+        "location": "미아동",
+        "time": "4시간 전",
+        "price": 520000,
+        "favorite": 2,
+        "chat": 4
+    },
+    {
+        "title": "타이틀9",
+        "image": "",
+        "location": "미아동",
+        "time": "10분 전",
+        "price": 1000000,
+        "favorite": 15,
+        "chat": 2
+    },
+    {
+        "title": "타이틀10",
+        "image": "",
+        "location": "신림동",
+        "time": "1분 전",
+        "price": 42000,
+        "favorite": 0,
+        "chat": 0
+    }
+]

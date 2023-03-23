@@ -57,12 +57,12 @@ class ItemTableViewCell: UITableViewCell {
         return title
     }()
     
-    let addressLabel : UILabel = {
-        let address = UILabel()
-        address.font = UIFont.systemFont(ofSize: 13)
-        address.text = "신림동"
-        address.textColor = .systemGray2
-        return address
+    let locationLabel : UILabel = {
+        let location = UILabel()
+        location.font = UIFont.systemFont(ofSize: 13)
+        location.text = "신림동"
+        location.textColor = .systemGray2
+        return location
     }()
 
     let timeLabel : UILabel = {
@@ -134,7 +134,7 @@ class ItemTableViewCell: UITableViewCell {
         self.contentView.addSubview(titleLabel)
         self.contentView.addSubview(completedStickerView)
 //        self.contentView.addSubview(reservedStickerView)
-        self.contentView.addSubview(addressLabel)
+        self.contentView.addSubview(locationLabel)
         self.contentView.addSubview(timeLabel)
         self.contentView.addSubview(priceLabel)
         self.contentView.addSubview(heartIconView)
@@ -152,14 +152,14 @@ class ItemTableViewCell: UITableViewCell {
             $0.leading.equalTo(postingImageView.snp.trailing).offset(10)
         }
         
-        addressLabel.snp.makeConstraints {
+        locationLabel.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(10)
             $0.leading.equalTo(postingImageView.snp.trailing).offset(10)
         }
         
         timeLabel.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(10)
-            $0.leading.equalTo(addressLabel.snp.trailing).offset(3)
+            $0.leading.equalTo(locationLabel.snp.trailing).offset(3)
         }
         
 //        reservedStickerView.snp.makeConstraints {
@@ -167,11 +167,11 @@ class ItemTableViewCell: UITableViewCell {
 //            $0.leading.equalTo(postingImageView.snp.trailing).offset(10)
 //        }
         completedStickerView.snp.makeConstraints {
-            $0.top.equalTo(addressLabel.snp.bottom).offset(10)
+            $0.top.equalTo(locationLabel.snp.bottom).offset(10)
             $0.leading.equalTo(postingImageView.snp.trailing).offset(10)
         }
         priceLabel.snp.makeConstraints {
-            $0.top.equalTo(addressLabel.snp.bottom).offset(10)
+            $0.top.equalTo(locationLabel.snp.bottom).offset(10)
             $0.leading.equalTo(completedStickerView.snp.trailing).offset(4)
 //            $0.leading.equalTo(reservedStickerView.snp.trailing).offset(4)
         }

@@ -63,7 +63,7 @@ class HomeViewController: UIViewController {
         }
         
         let postingViewController = FloatingButtonViewController()
-        postingViewController.modalPresentationStyle = .overCurrentContext
+        postingViewController.modalPresentationStyle = .overFullScreen
         self.present(postingViewController, animated: false)
     }
     
