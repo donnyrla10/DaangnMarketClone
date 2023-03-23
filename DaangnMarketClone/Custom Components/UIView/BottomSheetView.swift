@@ -39,9 +39,9 @@ class BottomSheetView: UIView {
         scrollView.setContentOffset(.init(x: 0, y: 0), animated: true)
     }
     
-    init() {
+    init(contentView: UIView) {
         super.init(frame: .init(x: 0, y: 0, width: UIScreen.width, height: UIScreen.height))
-        setUI()
+        setUI(contentView: contentView)
         self.isHidden = true
     }
     
@@ -49,22 +49,27 @@ class BottomSheetView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setUI() {
+    private func setUI(contentView: UIView) {
        
         self.addSubview(scrollView)
-        scrollView.addSubview(containerView)
         scrollView.addSubview(dismissButton)
+        scrollView.addSubview(containerView)
+        containerView.addSubview(contentView)
 
-        dismissButton.snp.makeConstraints { make in
-            make.left.right.equalTo(self)
-            make.top.bottom.equalToSuperview()
+        dismissButton.snp.makeConstraints {
+            $0.left.right.equalTo(self)
+            $0.top.bottom.equalToSuperview()
         }
         
-        containerView.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(UIScreen.height + UIWindow.bottomPadding)
-            make.height.equalTo(bottomSheetViewHeight)
-            make.width.equalTo(UIScreen.width)
-            make.bottom.equalToSuperview()
+        containerView.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(UIScreen.height + UIWindow.bottomPadding)
+            $0.height.equalTo(bottomSheetViewHeight)
+            $0.width.equalTo(UIScreen.width)
+            $0.bottom.equalToSuperview()
+        }
+        
+        contentView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
         }
     }
     
