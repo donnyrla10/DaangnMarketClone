@@ -28,6 +28,7 @@
 		F81BAF5329A7225300E8761D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F81BAF5129A7225300E8761D /* LaunchScreen.storyboard */; };
 		F83D8C6629CC1F0800B6F6F8 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83D8C6529CC1F0800B6F6F8 /* HomeModel.swift */; };
 		F83D8C6B29CC22A600B6F6F8 /* HomeDummyData.json in Resources */ = {isa = PBXBuildFile; fileRef = F83D8C6A29CC22A600B6F6F8 /* HomeDummyData.json */; };
+		F83D8C6E29CC88BC00B6F6F8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83D8C6D29CC88BC00B6F6F8 /* HomeViewModel.swift */; };
 		F86800F129B1BA5D00BBBA28 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86800F029B1BA5D00BBBA28 /* ItemTableViewCell.swift */; };
 		F89E700E29C4A579007A00C3 /* PostingItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89E700D29C4A579007A00C3 /* PostingItemViewController.swift */; };
 		F8B5F9B129BAE34400638103 /* FloatingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B5F9B029BAE34400638103 /* FloatingButtonViewController.swift */; };
@@ -58,6 +59,7 @@
 		F81BAF5429A7225300E8761D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F83D8C6529CC1F0800B6F6F8 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		F83D8C6A29CC22A600B6F6F8 /* HomeDummyData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HomeDummyData.json; sourceTree = "<group>"; };
+		F83D8C6D29CC88BC00B6F6F8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F86800F029B1BA5D00BBBA28 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		F89E700D29C4A579007A00C3 /* PostingItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingItemViewController.swift; sourceTree = "<group>"; };
 		F8B5F9B029BAE34400638103 /* FloatingButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonViewController.swift; sourceTree = "<group>"; };
@@ -130,7 +132,6 @@
 			children = (
 				39B4F09F29B2360800DA6B6D /* VillageLifeViewController.swift */,
 				39B4F0A329B238A100DA6B6D /* View */,
-				39B4F0A429B238A700DA6B6D /* ViewModel */,
 			);
 			path = VillageLife;
 			sourceTree = "<group>";
@@ -143,13 +144,6 @@
 				396ECB9829C35F6700ACE29E /* TopicListView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		39B4F0A429B238A700DA6B6D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		39B4F0AC29B24ACA00DA6B6D /* Custom Components */ = {
@@ -218,6 +212,7 @@
 		F81BAF4529A7225100E8761D /* DaangnMarketClone */ = {
 			isa = PBXGroup;
 			children = (
+				F83D8C6C29CC232300B6F6F8 /* ViewModel */,
 				F83D8C6429CC1EF100B6F6F8 /* Model */,
 				39C3B28B29B9B3450067660F /* Extenstions */,
 				39B4F0AC29B24ACA00DA6B6D /* Custom Components */,
@@ -236,6 +231,14 @@
 				F83D8C6A29CC22A600B6F6F8 /* HomeDummyData.json */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F83D8C6C29CC232300B6F6F8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F83D8C6D29CC88BC00B6F6F8 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F8B5F9AF29BAE2D100638103 /* View */ = {
@@ -377,6 +380,7 @@
 				39C3B28D29B9B35B0067660F /* Common+Ex.swift in Sources */,
 				39ACE45729BB817D00DB7B1A /* UIView+Ex.swift in Sources */,
 				39B4F0A629B238E100DA6B6D /* VillageLifeTableViewCell.swift in Sources */,
+				F83D8C6E29CC88BC00B6F6F8 /* HomeViewModel.swift in Sources */,
 				39C3B28629B9A44E0067660F /* CategoryButton.swift in Sources */,
 				39B4F09829A9DA4300DA6B6D /* MainTabbarController.swift in Sources */,
 				F89E700E29C4A579007A00C3 /* PostingItemViewController.swift in Sources */,

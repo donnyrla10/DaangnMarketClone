@@ -10,7 +10,7 @@ import SwiftUI
 import SnapKit
 
 class FloatingButtonViewController: UIViewController {
-    let cancelButton : UIButton = {
+    lazy var cancelButton : UIButton = {
         if #available(iOS 15.0, *) {
             var config = UIButton.Configuration.plain()
             config.image = UIImage(systemName: "xmark")
@@ -21,7 +21,6 @@ class FloatingButtonViewController: UIViewController {
             button.layer.cornerRadius = 25
             button.backgroundColor = .white
             button.tintColor = .black
-            
             button.addTarget(self, action: #selector(cancelPostingButton), for: .touchUpInside)
             return button
         }else {
