@@ -11,6 +11,13 @@ import SwiftUI
 //present modal sheet
 //Scroll
 class PostingItemViewController: UIViewController {
+    lazy var navigationBar : UINavigationBar = {
+        let navigationBar = UINavigationBar()
+        navigationBar.translatesAutoresizingMaskIntoConstraints = false
+        navigationBar.barTintColor = .white
+        return navigationBar
+    }()
+    
     var cameraButton: UIButton = {
         let button = UIButton()
         button.layer.borderWidth = 1
@@ -47,15 +54,32 @@ class PostingItemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .white
         setNavigationBar()
         setUI()
     }
     
     private func setNavigationBar() {
-        let cancelButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: nil, action: nil)
-        self.navigationController?.navigationItem.rightBarButtonItem = cancelButton
-        let doneButton = UIBarButtonItem(title: "완료", style: .done, target: self, action: nil)
-        self.navigationController?.navigationItem.leftBarButtonItem = doneButton
+        self.view.addSubview(navigationBar)
+        navigationBar.snp.makeConstraints {
+            $0.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+        }
+        let navigationItem = UINavigationItem(title: "내 물건 팔기")
+        let cancelButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(tapCancelButton))
+        let doneButton = UIBarButtonItem(title: "완료", style: .done, target: self, action: #selector(tapDoneButton))
+        cancelButton.tintColor = .black
+        doneButton.tintColor = .orange
+        navigationItem.leftBarButtonItem = cancelButton
+        navigationItem.rightBarButtonItem = doneButton
+        navigationBar.setItems([navigationItem], animated: true)
+    }
+    
+    @objc func tapCancelButton() {
+        self.presentingViewController?.dismiss(animated: true)
+    }
+    
+    @objc func tapDoneButton() {
+        self.presentingViewController?.dismiss(animated: true)
     }
     
     private func setUI() {

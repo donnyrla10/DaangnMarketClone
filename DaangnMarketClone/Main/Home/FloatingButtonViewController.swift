@@ -43,7 +43,7 @@ class FloatingButtonViewController: UIViewController {
         return backgroundButton
     }()
     
-    let myItemButton : UIButton = {
+    lazy var myItemButton : UIButton = {
         if #available(iOS 15.0, *) {
             var config = UIButton.Configuration.plain()
             var titleAttr = AttributedString.init("내 물건 팔기")
@@ -59,6 +59,7 @@ class FloatingButtonViewController: UIViewController {
             button.tintColor = .black
             button.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 0)
             button.contentHorizontalAlignment = .leading
+            button.addTarget(self, action: #selector(myItemPostingButton), for: .touchUpInside)
             return button
         }else {
             let button = UIButton()
@@ -72,6 +73,7 @@ class FloatingButtonViewController: UIViewController {
             button.tintColor = .black
             button.contentHorizontalAlignment = .left
             button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 50)
+            button.addTarget(self, action: #selector(myItemPostingButton), for: .touchUpInside)
             return button
         }
     }()
@@ -84,6 +86,12 @@ class FloatingButtonViewController: UIViewController {
     
     @objc func cancelPostingButton(_ sender: UIButton) {
         self.presentingViewController?.dismiss(animated: false)
+    }
+    
+    @objc func myItemPostingButton(_ sender: UIButton) {
+        let postingItemViewController = PostingItemViewController()
+        postingItemViewController.modalPresentationStyle = .overFullScreen
+        self.present(postingItemViewController, animated: true)
     }
     
     private func setUI() {
