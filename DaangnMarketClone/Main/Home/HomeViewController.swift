@@ -10,8 +10,11 @@ import SwiftUI
 import SnapKit
 
 class HomeViewController: UIViewController {
+    // viewmodel 객체 생성
+    private var homeViewModel: HomeViewModel = HomeViewModel()
+    
     let tableView = UITableView()
-    let postingFloatingButton : UIButton = {
+    lazy var postingFloatingButton : UIButton = {
         if #available(iOS 15.0, *) {
             var config = UIButton.Configuration.plain()
             var titleAttr = AttributedString.init("글쓰기")
@@ -63,7 +66,7 @@ class HomeViewController: UIViewController {
         }
         
         let postingViewController = FloatingButtonViewController()
-        postingViewController.modalPresentationStyle = .overCurrentContext
+        postingViewController.modalPresentationStyle = .overFullScreen
         self.present(postingViewController, animated: false)
     }
     
@@ -138,16 +141,28 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return homeViewModel.itemList.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //view model에서 데이터 리스트의 원소가져오기 하나씩
+        let item = homeViewModel.itemList[indexPath.row]
         let identifier = "\(indexPath)"
-        let cell = ItemTableViewCell.init(reuseIdentifier: identifier)
-        cell.titleLabel.text = "당근 판매합니다."
-        cell.postingImageView.image = UIImage(named: "DaangnIcon")
-        cell.selectionStyle = .none
-        return cell
+        //guard를 사용해서 identifier와 같지 않으면 return UITableViewCell로 해버렸는데, 같으면 resuableCell을 사용해야됨
+        guard let reusableCell = tableView.dequeueReusableCell(withIdentifier: identifier) else {
+            let cell = ItemTableViewCell(reuseIdentifier: identifier)
+            cell.titleLabel.text = item.title
+            cell.postingImageView.image = UIImage(named: item.image!) //우선.. 기본 이미지없으니까 강제..
+            cell.locationLabel.text = item.location
+            //값이 없어서.. 쓰레기값을 넣어서 나중에 처리
+            //model을 optional 타입으로 만들지 않을 수 없음 -> 나쁜 선택
+            //String(describing:) -> String 타입으로 변환? -> String으로 감싸서 문자열로 변환
+            cell.priceLabel.text = "\(item.price ?? 0)"
+            cell.heartIconView.textLabel.text = "\(item.favorite ?? -1)"
+            cell.chatIconView.textLabel.text = "\(item.chat ?? -1)"
+            return cell
+        }
+        return reusableCell
     }
 }
 
