@@ -14,6 +14,7 @@ protocol PostingDismissDelegate : AnyObject {
 //present modal sheet
 class PostingItemViewController: UIViewController {
     weak var delegate: PostingDismissDelegate?
+    let textViewPlaceHolder = "신림동에 올릴 게시글 내용을 작성해주세요. (판매 금지 물품은 게시가 제한될 수 있어요.)"
     
     lazy var navigationBar : UINavigationBar = {
         let navigationBar = UINavigationBar()
@@ -77,11 +78,12 @@ class PostingItemViewController: UIViewController {
         return textfield
     }()
     
-    var postingTextView: UITextView = {
+    lazy var postingTextView: UITextView = {
         let textview = UITextView()
-        textview.text = "신림동에 올릴 게시글 내용을 작성해주세요.\n(판매 금지 물품은 게시가 제한될 수 있어요.)"
+        textview.text = textViewPlaceHolder
         textview.font = UIFont.systemFont(ofSize: 18)
         textview.textColor = .systemGray4
+        textview.delegate = self
         return textview
     }()
     
@@ -131,56 +133,72 @@ class PostingItemViewController: UIViewController {
         
         cameraButton.snp.makeConstraints {
             $0.top.equalToSuperview().inset(20)
-            $0.leading.equalToSuperview().inset(12)
+            $0.leading.equalToSuperview().inset(16)
             $0.width.height.equalTo(80)
         }
         
         divider1.snp.makeConstraints {
             $0.top.equalTo(cameraButton.snp.bottom).offset(20)
-            $0.leading.equalToSuperview().inset(12)
-            $0.width.equalTo(UIScreen.main.bounds.width - 24)
+            $0.leading.equalToSuperview().inset(16)
+            $0.width.equalTo(UIScreen.main.bounds.width - 32)
             $0.height.equalTo(1)
         }
         
         titleTextField.snp.makeConstraints {
             $0.top.equalTo(divider1.snp.bottom).offset(20)
-            $0.leading.trailing.equalToSuperview().inset(12)
+            $0.leading.trailing.equalToSuperview().inset(16)
             $0.height.equalTo(24)
         }
-
+        
         divider2.snp.makeConstraints {
             $0.top.equalTo(titleTextField.snp.bottom).offset(20)
-            $0.leading.equalToSuperview().inset(12)
-            $0.width.equalTo(UIScreen.main.bounds.width - 24)
+            $0.leading.equalToSuperview().inset(16)
+            $0.width.equalTo(UIScreen.main.bounds.width - 32)
             $0.height.equalTo(1)
         }
         
         priceTextField.snp.makeConstraints {
             $0.top.equalTo(divider2.snp.bottom).offset(20)
-            $0.leading.trailing.equalToSuperview().inset(12)
+            $0.leading.trailing.equalToSuperview().inset(16)
             $0.height.equalTo(24)
         }
-
+        
         divider3.snp.makeConstraints {
             $0.top.equalTo(priceTextField.snp.bottom).offset(20)
-            $0.leading.equalToSuperview().inset(12)
-            $0.width.equalTo(UIScreen.main.bounds.width - 24)
+            $0.leading.equalToSuperview().inset(16)
+            $0.width.equalTo(UIScreen.main.bounds.width - 32)
             $0.height.equalTo(1)
         }
         
         postingTextView.snp.makeConstraints {
             $0.top.equalTo(divider3.snp.bottom).offset(20)
-            $0.leading.trailing.equalToSuperview().inset(12)
-            $0.width.equalTo(UIScreen.main.bounds.width - 24)
-            $0.height.equalTo(300)
+            $0.leading.trailing.equalToSuperview().inset(10)
+            $0.width.equalTo(UIScreen.main.bounds.width - 20)
+            $0.height.equalTo(100)
         }
         
         divider4.snp.makeConstraints {
             $0.top.equalTo(postingTextView.snp.bottom).offset(20)
-            $0.leading.equalToSuperview().inset(12)
-            $0.width.equalTo(UIScreen.main.bounds.width - 24)
+            $0.leading.equalToSuperview().inset(16)
+            $0.width.equalTo(UIScreen.main.bounds.width - 32)
             $0.height.equalTo(1)
             $0.bottom.equalToSuperview()
+        }
+    }
+}
+
+extension PostingItemViewController : UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == textViewPlaceHolder {
+            textView.text = nil
+            textView.textColor = .black
+        }
+    }
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            textView.text = textViewPlaceHolder
+            textView.textColor = .lightGray
         }
     }
 }
