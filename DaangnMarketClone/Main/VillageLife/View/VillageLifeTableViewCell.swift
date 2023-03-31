@@ -13,13 +13,11 @@ class VillageLifeTableViewCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.numberOfLines = 2
-        label.text = "당근마켓 동네생활 테스트"
         return label
     }()
     
     let categoryLabel: UILabel = {
         let label = UILabel()
-        label.text = "질문"
         label.font = UIFont.systemFont(ofSize: 13)
         label.textColor = .systemBlue
         return label
@@ -28,7 +26,6 @@ class VillageLifeTableViewCell: UITableViewCell {
     let locationLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 13)
-        label.text = "· 미아동"
         label.textColor = .systemGray2
         return label
     }()
@@ -59,17 +56,63 @@ class VillageLifeTableViewCell: UITableViewCell {
         return view
     }()
     
-    init(reuseIdentifier: String?) {
+    init(reuseIdentifier: String?, villageLifeInfo: VillageLife) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         self.selectionStyle = .none
         setUI()
+        print("villageLifeInfo \(villageLifeInfo)")
+        setData(villageLifeInfo)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setUI() {
+    /// 받아온 데이터 세팅하기
+    private func setData(_ villageLifeInfo: VillageLife) {
+        /// 쓸 데이터 미리 세팅하기
+        guard let title = villageLifeInfo.title,
+              let image = villageLifeInfo.image,
+              let location = villageLifeInfo.location,
+              let time = villageLifeInfo.time,
+              let category = villageLifeInfo.category,
+              let comment = villageLifeInfo.comment,
+              let participants = villageLifeInfo.participants,
+              let favorite = villageLifeInfo.favorite
+        else { return }
+        
+        titleLabel.text = title
+        locationLabel.text = "\(location)"
+        writeTimeLabel.text = time
+        thumbnail.image = UIImage(named: image)
+        favoriteIconView.setData(title: "\(favorite)", icon: .favorite)
+        
+        
+        /// 카테고리
+        /// 질문, 카테고리일 때만 보이기
+        if category == CategoryType.question.rawValue || category == CategoryType.accident.rawValue {
+            categoryLabel.text = category
+        } else {
+            locationLabel.snp.makeConstraints {
+                $0.leading.equalToSuperview().inset(16)
+            }
+        }
+        
+        
+        /// 코멘트 0개일 때 처리
+        // TODO: 더 좋은 방법 생각해서 해오기
+        /// 스택뷰로 만들어보기
+        if comment <= 0 {
+            commentIconView.isHidden = true
+            favoriteIconView.snp.makeConstraints {
+                $0.leading.equalToSuperview().inset(16)
+            }
+        } else {
+            commentIconView.setData(title: "\(comment)", icon: .comment)
+        }
+    }
+    
+    private func setUI() {
         self.contentView.addSubview(titleLabel)
         self.contentView.addSubview(categoryLabel)
         self.contentView.addSubview(locationLabel)

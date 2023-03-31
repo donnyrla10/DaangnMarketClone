@@ -27,6 +27,7 @@ class VillageLifeViewController: BaseUIViewController {
         return view
     }()
     
+<<<<<<< Updated upstream:DaangnMarketClone/Main/VillageLife/VillageLifeViewController.swift
     lazy var floatingButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "plus"), for: .normal)
@@ -45,6 +46,11 @@ class VillageLifeViewController: BaseUIViewController {
         postingViewController.modalPresentationStyle = .overFullScreen
         self.present(postingViewController, animated: false)
     }
+=======
+    private let topicListVIew = TopicListView()
+    
+    let villageLifeViewModel = VillageLifeViewModel()
+>>>>>>> Stashed changes:DaangnMarketClone/Main/VillageLife/View/VillageLifeViewController.swift
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,7 +86,7 @@ class VillageLifeViewController: BaseUIViewController {
 
 extension VillageLifeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return villageLifeViewModel.items.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -88,13 +94,16 @@ extension VillageLifeViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let identifier = "\(indexPath.row)"
+        
+        let item = villageLifeViewModel.items[indexPath.row]
+        
+        let identifier = "VILLAGELIFE_\(indexPath.row)_\(item)"
         
         if let reuseCell = tableView.dequeueReusableCell(withIdentifier: identifier) {
             return reuseCell
         }
         
-        let cell = VillageLifeTableViewCell.init(reuseIdentifier: identifier)
+        let cell = VillageLifeTableViewCell.init(reuseIdentifier: identifier, villageLifeInfo: item)
         
         return cell
     }

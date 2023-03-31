@@ -9,7 +9,7 @@ import Foundation
 
 /*
  "title": "타이틀1",
- "image": "",
+ "image": "",Xz
  "location": "미아동",
  "time": "10분 전",
  "category": "질문",
