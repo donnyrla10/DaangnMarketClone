@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		246099CC29D67EE000500EE8 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246099CB29D67EE000500EE8 /* Constant.swift */; };
 		246099CE29D67FDD00500EE8 /* PostingVillageLifeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246099CD29D67FDD00500EE8 /* PostingVillageLifeViewController.swift */; };
+		246099D029D6816000500EE8 /* PostingSummaryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246099CF29D6816000500EE8 /* PostingSummaryListView.swift */; };
+		246099D329D6CF4400500EE8 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246099D229D6CF4400500EE8 /* TextView.swift */; };
 		396ECB9929C35F6700ACE29E /* TopicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ECB9829C35F6700ACE29E /* TopicListView.swift */; };
 		396ECB9B29C3699800ACE29E /* JoinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ECB9A29C3699800ACE29E /* JoinButton.swift */; };
 		39ACE45729BB817D00DB7B1A /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ACE45629BB817D00DB7B1A /* UIView+Ex.swift */; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		246099CB29D67EE000500EE8 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		246099CD29D67FDD00500EE8 /* PostingVillageLifeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingVillageLifeViewController.swift; sourceTree = "<group>"; };
+		246099CF29D6816000500EE8 /* PostingSummaryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingSummaryListView.swift; sourceTree = "<group>"; };
+		246099D229D6CF4400500EE8 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		396ECB9829C35F6700ACE29E /* TopicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicListView.swift; sourceTree = "<group>"; };
 		396ECB9A29C3699800ACE29E /* JoinButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinButton.swift; sourceTree = "<group>"; };
 		39ACE45629BB817D00DB7B1A /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
@@ -82,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		246099D129D6CF3600500EE8 /* UITextView */ = {
+			isa = PBXGroup;
+			children = (
+				246099D229D6CF4400500EE8 /* TextView.swift */,
+			);
+			path = UITextView;
+			sourceTree = "<group>";
+		};
 		2477C05626726141C90F3849 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +159,7 @@
 				39B4F0A529B238E100DA6B6D /* VillageLifeTableViewCell.swift */,
 				39C3B28729B9A86F0067660F /* VillageLifeTableHeaderView.swift */,
 				396ECB9829C35F6700ACE29E /* TopicListView.swift */,
+				246099CF29D6816000500EE8 /* PostingSummaryListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -154,6 +167,7 @@
 		39B4F0AC29B24ACA00DA6B6D /* Custom Components */ = {
 			isa = PBXGroup;
 			children = (
+				246099D129D6CF3600500EE8 /* UITextView */,
 				39C3B28429B9A4130067660F /* UIButton */,
 				39C3B28129B24B2D0067660F /* UIView */,
 			);
@@ -384,8 +398,10 @@
 				39B4F0A229B236B600DA6B6D /* BaseUIViewController.swift in Sources */,
 				396ECB9929C35F6700ACE29E /* TopicListView.swift in Sources */,
 				39C3B28A29B9B2710067660F /* BottomSheetView.swift in Sources */,
+				246099D329D6CF4400500EE8 /* TextView.swift in Sources */,
 				39C3B28D29B9B35B0067660F /* Common+Ex.swift in Sources */,
 				39ACE45729BB817D00DB7B1A /* UIView+Ex.swift in Sources */,
+				246099D029D6816000500EE8 /* PostingSummaryListView.swift in Sources */,
 				39B4F0A629B238E100DA6B6D /* VillageLifeTableViewCell.swift in Sources */,
 				F83D8C6E29CC88BC00B6F6F8 /* HomeViewModel.swift in Sources */,
 				39C3B28629B9A44E0067660F /* CategoryButton.swift in Sources */,

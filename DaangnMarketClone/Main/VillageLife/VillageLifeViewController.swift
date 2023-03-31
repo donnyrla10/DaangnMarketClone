@@ -38,7 +38,7 @@ class VillageLifeViewController: BaseUIViewController {
         return button
     }()
     
-    private let topicListVIew = TopicListView()
+    private let topicListView = TopicListView()
     
     @objc func selectFloatingButton() {
         let postingViewController = FloatingButtonViewController(viewType: .villageLife)
@@ -72,7 +72,7 @@ class VillageLifeViewController: BaseUIViewController {
         
         /// 주제
         if sender.tag == 0 {
-            let bottomSheetView = BottomSheetView(contentView: topicListVIew)
+            let bottomSheetView = BottomSheetView(contentView: topicListView)
             bottomSheetView.presentBottomSheetView()
         }
     }

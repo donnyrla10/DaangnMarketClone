@@ -39,8 +39,9 @@ class BottomSheetView: UIView {
         scrollView.setContentOffset(.init(x: 0, y: 0), animated: true)
     }
     
-    init(contentView: UIView) {
+    init(contentView: UIView, viewHeight: CGFloat = UIScreen.height - 200) {
         super.init(frame: .init(x: 0, y: 0, width: UIScreen.width, height: UIScreen.height))
+        bottomSheetViewHeight = viewHeight + UIWindow.bottomPadding
         setUI(contentView: contentView)
         self.isHidden = true
     }
