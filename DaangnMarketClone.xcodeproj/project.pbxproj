@@ -30,6 +30,7 @@
 		F83D8C6B29CC22A600B6F6F8 /* HomeDummyData.json in Resources */ = {isa = PBXBuildFile; fileRef = F83D8C6A29CC22A600B6F6F8 /* HomeDummyData.json */; };
 		F83D8C6E29CC88BC00B6F6F8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83D8C6D29CC88BC00B6F6F8 /* HomeViewModel.swift */; };
 		F86800F129B1BA5D00BBBA28 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86800F029B1BA5D00BBBA28 /* ItemTableViewCell.swift */; };
+		F898375C29D6BC91000E4C88 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F898375B29D6BC91000E4C88 /* NavigationController.swift */; };
 		F89E700E29C4A579007A00C3 /* PostingItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89E700D29C4A579007A00C3 /* PostingItemViewController.swift */; };
 		F8B5F9B129BAE34400638103 /* FloatingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B5F9B029BAE34400638103 /* FloatingButtonViewController.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		F83D8C6A29CC22A600B6F6F8 /* HomeDummyData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HomeDummyData.json; sourceTree = "<group>"; };
 		F83D8C6D29CC88BC00B6F6F8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F86800F029B1BA5D00BBBA28 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		F898375B29D6BC91000E4C88 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		F89E700D29C4A579007A00C3 /* PostingItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingItemViewController.swift; sourceTree = "<group>"; };
 		F8B5F9B029BAE34400638103 /* FloatingButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonViewController.swift; sourceTree = "<group>"; };
 		FB58295250B9DB4DFA274626 /* Pods-DaangnMarketClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaangnMarketClone.debug.xcconfig"; path = "Target Support Files/Pods-DaangnMarketClone/Pods-DaangnMarketClone.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				39B4F09329A9D9EA00DA6B6D /* RootViewController.swift */,
 				F81BAF4A29A7225100E8761D /* SplashViewController.swift */,
 				39B4F0A129B236B600DA6B6D /* BaseUIViewController.swift */,
+				F898375B29D6BC91000E4C88 /* NavigationController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				F86800F129B1BA5D00BBBA28 /* ItemTableViewCell.swift in Sources */,
 				F83D8C6629CC1F0800B6F6F8 /* HomeModel.swift in Sources */,
 				39B4F09B29A9DA6B00DA6B6D /* HomeViewController.swift in Sources */,
+				F898375C29D6BC91000E4C88 /* NavigationController.swift in Sources */,
 				F8B5F9B129BAE34400638103 /* FloatingButtonViewController.swift in Sources */,
 				F81BAF4B29A7225100E8761D /* SplashViewController.swift in Sources */,
 				39C3B28829B9A86F0067660F /* VillageLifeTableHeaderView.swift in Sources */,
