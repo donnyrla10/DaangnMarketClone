@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SwiftUI
+//import SwiftUI
 
 //present modal sheet
 //Scroll
@@ -113,82 +113,84 @@ class PostingItemViewController: UIViewController {
     
     private func setUI() {
         self.view.addSubview(scrollView)
-        scrollView.snp.makeConstraints {
-            $0.top.equalTo(navigationBar.snp.bottom)
-            $0.leading.trailing.bottom.equalToSuperview()
-        }
-        
         [cameraButton, divider1, titleTextField, divider2, priceTextField, divider3, postingTextView, divider4].forEach {
             scrollView.addSubview($0)
         }
         
+        scrollView.snp.makeConstraints {
+            $0.top.equalTo(navigationBar.snp.bottom)
+            $0.leading.trailing.bottom.equalToSuperview()
+            $0.bottom.equalToSuperview()
+        }
+        
         cameraButton.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(20)
-            $0.leading.equalToSuperview().offset(12)
+            $0.top.equalToSuperview().inset(20)
+            $0.leading.equalToSuperview().inset(12)
             $0.width.height.equalTo(80)
         }
         
         divider1.snp.makeConstraints {
             $0.top.equalTo(cameraButton.snp.bottom).offset(20)
-            $0.leading.equalToSuperview().offset(12)
+            $0.leading.equalToSuperview().inset(12)
             $0.width.equalTo(UIScreen.main.bounds.width - 24)
             $0.height.equalTo(1)
         }
         
         titleTextField.snp.makeConstraints {
             $0.top.equalTo(divider1.snp.bottom).offset(20)
-            $0.leading.trailing.equalToSuperview().offset(12)
+            $0.leading.trailing.equalToSuperview().inset(12)
             $0.height.equalTo(24)
         }
 
         divider2.snp.makeConstraints {
             $0.top.equalTo(titleTextField.snp.bottom).offset(20)
-            $0.leading.equalToSuperview().offset(12)
+            $0.leading.equalToSuperview().inset(12)
             $0.width.equalTo(UIScreen.main.bounds.width - 24)
             $0.height.equalTo(1)
         }
         
         priceTextField.snp.makeConstraints {
             $0.top.equalTo(divider2.snp.bottom).offset(20)
-            $0.leading.trailing.equalToSuperview().offset(12)
+            $0.leading.trailing.equalToSuperview().inset(12)
             $0.height.equalTo(24)
         }
 
         divider3.snp.makeConstraints {
             $0.top.equalTo(priceTextField.snp.bottom).offset(20)
-            $0.leading.equalToSuperview().offset(12)
+            $0.leading.equalToSuperview().inset(12)
             $0.width.equalTo(UIScreen.main.bounds.width - 24)
             $0.height.equalTo(1)
         }
         
         postingTextView.snp.makeConstraints {
             $0.top.equalTo(divider3.snp.bottom).offset(20)
-            $0.leading.trailing.equalToSuperview().offset(12)
+            $0.leading.trailing.equalToSuperview().inset(12)
             $0.width.equalTo(UIScreen.main.bounds.width - 24)
-            $0.height.equalTo(70)
+            $0.height.equalTo(300)
         }
         
         divider4.snp.makeConstraints {
             $0.top.equalTo(postingTextView.snp.bottom).offset(20)
-            $0.leading.equalToSuperview().offset(12)
+            $0.leading.equalToSuperview().inset(12)
             $0.width.equalTo(UIScreen.main.bounds.width - 24)
             $0.height.equalTo(1)
+            $0.bottom.equalToSuperview()
         }
     }
 }
 
-//Previews ===============================================================
-struct PostingItemViewController_Previews: PreviewProvider {
-    static var previews: some View {
-        Container().edgesIgnoringSafeArea(.all)
-    }
-    
-    struct Container: UIViewControllerRepresentable {
-        func makeUIViewController(context: Context) -> UIViewController {
-            let postingItemViewController = PostingItemViewController()
-            return UINavigationController(rootViewController: postingItemViewController)
-        }
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
-        typealias UIViewControllerType = UIViewController
-    }
-}
+////Previews ===============================================================
+//struct PostingItemViewController_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Container().edgesIgnoringSafeArea(.all)
+//    }
+//
+//    struct Container: UIViewControllerRepresentable {
+//        func makeUIViewController(context: Context) -> UIViewController {
+//            let postingItemViewController = PostingItemViewController()
+//            return UINavigationController(rootViewController: postingItemViewController)
+//        }
+//        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
+//        typealias UIViewControllerType = UIViewController
+//    }
+//}

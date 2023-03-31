@@ -16,16 +16,14 @@ class MainTabbarController: UITabBarController {
         let homeViewController = HomeViewController()
         let villageLifeViewController = VillageLifeViewController()
         
-        let homeNavigationController = UINavigationController(rootViewController: homeViewController)
-        let villageLifeNavigationController = UINavigationController(rootViewController: villageLifeViewController)
-        
+        let homeNavigationController = NavigationController(rootViewController: homeViewController, tabType: .home)
+        let villageLifeNavigationController = NavigationController(rootViewController: villageLifeViewController, tabType: .village)
+
         let homeTabbarItem = UITabBarItem(title: "홈", image: UIImage(named: "tabbar_button_unselected_home"), selectedImage: UIImage(named: "tabbar_button_selected_home"))
         homeNavigationController.tabBarItem = homeTabbarItem
         
         let villageLifeTabbarItem = UITabBarItem(title: "동네생활", image: UIImage(), selectedImage: UIImage())
         villageLifeNavigationController.tabBarItem = villageLifeTabbarItem
-        
-        
         
         setViewControllers([homeNavigationController, villageLifeNavigationController,  UIViewController(), UIViewController(), UIViewController()], animated: true)
     }
