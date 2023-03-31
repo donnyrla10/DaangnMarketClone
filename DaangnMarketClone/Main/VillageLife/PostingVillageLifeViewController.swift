@@ -30,14 +30,26 @@ class PostingVillageLifeViewController: BaseUIViewController {
         return textView
     }()
     
+    private var villageLifeViewModel: VillageLifeViewModel?
+    
     @objc func tapCancelButton() {
         self.presentingViewController?.dismiss(animated: true)
     }
     
     @objc func tapDoneButton() {
         self.presentingViewController?.dismiss(animated: true)
+        
+        /// 값 가져오기
+        guard let titleText = titleTextField.text,
+              let contentText = contentTextView.text
+        else { return }
+        
+        let villageLifeModel = VillageLife(title: titleText, image: "", location: "", time: "", category: "", comment: 0, participants: 0, favorite: 0)
+        
+        /// 완료버튼 누를 시 값 저장
+        villageLifeViewModel?.saveItem(contents: villageLifeModel)
     }
-    
+   
     @objc func selectSummaryButton() {
         openSummaryBottomSheet()
     }
@@ -52,6 +64,15 @@ class PostingVillageLifeViewController: BaseUIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
             openSummaryBottomSheet()
         }
+    }
+    
+    init(viewModel: VillageLifeViewModel) {
+        super.init(nibName: nil, bundle: nil)
+        self.villageLifeViewModel = viewModel
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     private func openSummaryBottomSheet() {

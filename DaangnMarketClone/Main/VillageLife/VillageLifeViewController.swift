@@ -27,7 +27,6 @@ class VillageLifeViewController: BaseUIViewController {
         return view
     }()
     
-<<<<<<< Updated upstream:DaangnMarketClone/Main/VillageLife/VillageLifeViewController.swift
     lazy var floatingButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "plus"), for: .normal)
@@ -41,20 +40,25 @@ class VillageLifeViewController: BaseUIViewController {
     
     private let topicListView = TopicListView()
     
+    private let villageLifeViewModel = VillageLifeViewModel()
+    
     @objc func selectFloatingButton() {
         let postingViewController = FloatingButtonViewController(viewType: .villageLife)
+        postingViewController.postingAction = postingAction
         postingViewController.modalPresentationStyle = .overFullScreen
         self.present(postingViewController, animated: false)
     }
-=======
-    private let topicListVIew = TopicListView()
-    
-    let villageLifeViewModel = VillageLifeViewModel()
->>>>>>> Stashed changes:DaangnMarketClone/Main/VillageLife/View/VillageLifeViewController.swift
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        villageLifeViewModel.reloadTableView = updateTableView
         setUI()
+    }
+    
+    private func postingAction() {
+          let postingVillageLifeViewController = PostingVillageLifeViewController(viewModel: villageLifeViewModel)
+          postingVillageLifeViewController.modalPresentationStyle = .fullScreen
+          self.present(postingVillageLifeViewController, animated: true)
     }
     
     /// UI 생성
@@ -71,6 +75,10 @@ class VillageLifeViewController: BaseUIViewController {
             $0.bottom.equalToSuperview().inset(100)
             $0.width.height.equalTo(50)
         }
+    }
+    
+    private func updateTableView() {
+        villageLifeTableView.reloadData()
     }
     
     private func categoryButtonAction(_ sender: UIButton) {
@@ -94,10 +102,8 @@ extension VillageLifeViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let item = villageLifeViewModel.items[indexPath.row]
-        
-        let identifier = "VILLAGELIFE_\(indexPath.row)_\(item)"
+        let identifier = "\(indexPath.row)"
         
         if let reuseCell = tableView.dequeueReusableCell(withIdentifier: identifier) {
             return reuseCell

@@ -43,6 +43,7 @@ class IconWithTextView: UIView {
             $0.width.height.equalTo(15)
         }
         
+        textLabel.text = text
         textLabel.snp.makeConstraints {
             $0.leading.equalTo(iconImageView.snp.trailing).offset(3)
             $0.trailing.equalToSuperview()
@@ -61,11 +62,6 @@ class IconWithTextView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    func setData(title: String, icon: IconType) {
-        textLabel.text = title
-        setIcon(iconType: icon)
     }
     
     private func setIcon(iconType: IconType) {

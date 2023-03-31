@@ -78,6 +78,8 @@ class FloatingButtonViewController: UIViewController {
         }
     }()
     
+    var postingAction: (() -> ())?
+    
     /// type을 이용해 동네생활에서는 다른 뷰가 뜨도록
     init(viewType: ViewType = .home) {
         super.init(nibName: nil, bundle: nil)
@@ -104,9 +106,18 @@ class FloatingButtonViewController: UIViewController {
     }
     
     @objc func postingVillageLife() {
-        let postingVillageLifeViewController = PostingVillageLifeViewController()
-        postingVillageLifeViewController.modalPresentationStyle = .fullScreen
-        self.present(postingVillageLifeViewController, animated: true)
+        // TODO: 어떻게 ViewModel을 넘겨줄 수 있을까?
+        
+        // TODO: 더 좋은 방법이 없을까욤?
+        if let postingAction = postingAction {
+            self.dismiss(animated: false) {
+                postingAction()
+            }
+        }
+//
+//        let postingVillageLifeViewController = PostingVillageLifeViewController(viewModel: VillageLifeViewModel())
+//        postingVillageLifeViewController.modalPresentationStyle = .fullScreen
+//        self.present(postingVillageLifeViewController, animated: true)
     }
     
     private func setData(viewType: ViewType) {
