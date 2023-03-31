@@ -78,10 +78,19 @@ class FloatingButtonViewController: UIViewController {
         }
     }()
     
-
+    /// type을 이용해 동네생활에서는 다른 뷰가 뜨도록
+    init(viewType: ViewType = .home) {
+        super.init(nibName: nil, bundle: nil)
+        setUI()
+        setData(viewType: viewType)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUI()
     }
     
     @objc func cancelPostingButton(_ sender: UIButton) {
@@ -92,6 +101,26 @@ class FloatingButtonViewController: UIViewController {
         let postingItemViewController = PostingItemViewController()
         postingItemViewController.modalPresentationStyle = .overFullScreen
         self.present(postingItemViewController, animated: true)
+    }
+    
+    @objc func postingVillageLife() {
+        let postingVillageLifeViewController = PostingVillageLifeViewController()
+        postingVillageLifeViewController.modalPresentationStyle = .fullScreen
+        self.present(postingVillageLifeViewController, animated: true)
+    }
+    
+    private func setData(viewType: ViewType) {
+        /// addTarget 초기화
+        myItemButton.removeTarget(nil, action: nil, for: .allEvents)
+        
+        switch viewType {
+            case .home:
+                myItemButton.setTitle("내 물건 팔기", for: .normal)
+                myItemButton.addTarget(self, action: #selector(myItemPostingButton), for: .touchUpInside)
+            case .villageLife:
+                myItemButton.setTitle("동네 생활", for: .normal)
+                myItemButton.addTarget(self, action: #selector(postingVillageLife), for: .touchUpInside)
+        }
     }
     
     private func setUI() {

@@ -27,7 +27,24 @@ class VillageLifeViewController: BaseUIViewController {
         return view
     }()
     
-    private let topicListVIew = TopicListView()
+    lazy var floatingButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "plus"), for: .normal)
+        button.layer.cornerRadius = 25
+        button.backgroundColor = .orange
+        button.tintColor = .white
+        button.layer.shadowRadius = 2
+        button.addTarget(self, action: #selector(selectFloatingButton), for: .touchUpInside)
+        return button
+    }()
+    
+    private let topicListView = TopicListView()
+    
+    @objc func selectFloatingButton() {
+        let postingViewController = FloatingButtonViewController(viewType: .villageLife)
+        postingViewController.modalPresentationStyle = .overFullScreen
+        self.present(postingViewController, animated: false)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +54,16 @@ class VillageLifeViewController: BaseUIViewController {
     /// UI 생성
     private func setUI() {
         self.view.addSubview(villageLifeTableView)
+        self.view.addSubview(floatingButton)
         
         villageLifeTableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
+        }
+        
+        floatingButton.snp.makeConstraints {
+            $0.trailing.equalToSuperview().inset(20)
+            $0.bottom.equalToSuperview().inset(100)
+            $0.width.height.equalTo(50)
         }
     }
     
@@ -48,7 +72,7 @@ class VillageLifeViewController: BaseUIViewController {
         
         /// 주제
         if sender.tag == 0 {
-            let bottomSheetView = BottomSheetView(contentView: topicListVIew)
+            let bottomSheetView = BottomSheetView(contentView: topicListView)
             bottomSheetView.presentBottomSheetView()
         }
     }

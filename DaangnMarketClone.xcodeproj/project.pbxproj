@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		246099CC29D67EE000500EE8 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246099CB29D67EE000500EE8 /* Constant.swift */; };
+		246099CE29D67FDD00500EE8 /* PostingVillageLifeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246099CD29D67FDD00500EE8 /* PostingVillageLifeViewController.swift */; };
+		246099D029D6816000500EE8 /* PostingSummaryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246099CF29D6816000500EE8 /* PostingSummaryListView.swift */; };
+		246099D329D6CF4400500EE8 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246099D229D6CF4400500EE8 /* TextView.swift */; };
 		396ECB9929C35F6700ACE29E /* TopicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ECB9829C35F6700ACE29E /* TopicListView.swift */; };
 		396ECB9B29C3699800ACE29E /* JoinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ECB9A29C3699800ACE29E /* JoinButton.swift */; };
 		39ACE45729BB817D00DB7B1A /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ACE45629BB817D00DB7B1A /* UIView+Ex.swift */; };
@@ -36,6 +40,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		246099CB29D67EE000500EE8 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		246099CD29D67FDD00500EE8 /* PostingVillageLifeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingVillageLifeViewController.swift; sourceTree = "<group>"; };
+		246099CF29D6816000500EE8 /* PostingSummaryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingSummaryListView.swift; sourceTree = "<group>"; };
+		246099D229D6CF4400500EE8 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		396ECB9829C35F6700ACE29E /* TopicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicListView.swift; sourceTree = "<group>"; };
 		396ECB9A29C3699800ACE29E /* JoinButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinButton.swift; sourceTree = "<group>"; };
 		39ACE45629BB817D00DB7B1A /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
@@ -80,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		246099D129D6CF3600500EE8 /* UITextView */ = {
+			isa = PBXGroup;
+			children = (
+				246099D229D6CF4400500EE8 /* TextView.swift */,
+			);
+			path = UITextView;
+			sourceTree = "<group>";
+		};
 		2477C05626726141C90F3849 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +111,7 @@
 				39B4F09329A9D9EA00DA6B6D /* RootViewController.swift */,
 				F81BAF4A29A7225100E8761D /* SplashViewController.swift */,
 				39B4F0A129B236B600DA6B6D /* BaseUIViewController.swift */,
+				F8B5F9B029BAE34400638103 /* FloatingButtonViewController.swift */,
 				F898375B29D6BC91000E4C88 /* NavigationController.swift */,
 			);
 			path = Common;
@@ -123,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				39B4F09A29A9DA6B00DA6B6D /* HomeViewController.swift */,
-				F8B5F9B029BAE34400638103 /* FloatingButtonViewController.swift */,
 				F89E700D29C4A579007A00C3 /* PostingItemViewController.swift */,
 				F8B5F9AF29BAE2D100638103 /* View */,
 			);
@@ -134,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				39B4F09F29B2360800DA6B6D /* VillageLifeViewController.swift */,
+				246099CD29D67FDD00500EE8 /* PostingVillageLifeViewController.swift */,
 				39B4F0A329B238A100DA6B6D /* View */,
 			);
 			path = VillageLife;
@@ -145,6 +162,7 @@
 				39B4F0A529B238E100DA6B6D /* VillageLifeTableViewCell.swift */,
 				39C3B28729B9A86F0067660F /* VillageLifeTableHeaderView.swift */,
 				396ECB9829C35F6700ACE29E /* TopicListView.swift */,
+				246099CF29D6816000500EE8 /* PostingSummaryListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,6 +170,7 @@
 		39B4F0AC29B24ACA00DA6B6D /* Custom Components */ = {
 			isa = PBXGroup;
 			children = (
+				246099D129D6CF3600500EE8 /* UITextView */,
 				39C3B28429B9A4130067660F /* UIButton */,
 				39C3B28129B24B2D0067660F /* UIView */,
 			);
@@ -181,6 +200,7 @@
 			children = (
 				39C3B28C29B9B35B0067660F /* Common+Ex.swift */,
 				39ACE45629BB817D00DB7B1A /* UIView+Ex.swift */,
+				246099CB29D67EE000500EE8 /* Constant.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -374,6 +394,7 @@
 				39B4F09B29A9DA6B00DA6B6D /* HomeViewController.swift in Sources */,
 				F898375C29D6BC91000E4C88 /* NavigationController.swift in Sources */,
 				F8B5F9B129BAE34400638103 /* FloatingButtonViewController.swift in Sources */,
+				246099CE29D67FDD00500EE8 /* PostingVillageLifeViewController.swift in Sources */,
 				F81BAF4B29A7225100E8761D /* SplashViewController.swift in Sources */,
 				39C3B28829B9A86F0067660F /* VillageLifeTableHeaderView.swift in Sources */,
 				39B4F0A029B2360800DA6B6D /* VillageLifeViewController.swift in Sources */,
@@ -381,12 +402,15 @@
 				39B4F0A229B236B600DA6B6D /* BaseUIViewController.swift in Sources */,
 				396ECB9929C35F6700ACE29E /* TopicListView.swift in Sources */,
 				39C3B28A29B9B2710067660F /* BottomSheetView.swift in Sources */,
+				246099D329D6CF4400500EE8 /* TextView.swift in Sources */,
 				39C3B28D29B9B35B0067660F /* Common+Ex.swift in Sources */,
 				39ACE45729BB817D00DB7B1A /* UIView+Ex.swift in Sources */,
+				246099D029D6816000500EE8 /* PostingSummaryListView.swift in Sources */,
 				39B4F0A629B238E100DA6B6D /* VillageLifeTableViewCell.swift in Sources */,
 				F83D8C6E29CC88BC00B6F6F8 /* HomeViewModel.swift in Sources */,
 				39C3B28629B9A44E0067660F /* CategoryButton.swift in Sources */,
 				39B4F09829A9DA4300DA6B6D /* MainTabbarController.swift in Sources */,
+				246099CC29D67EE000500EE8 /* Constant.swift in Sources */,
 				F89E700E29C4A579007A00C3 /* PostingItemViewController.swift in Sources */,
 				39B4F09429A9D9EA00DA6B6D /* RootViewController.swift in Sources */,
 			);
