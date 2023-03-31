@@ -6,11 +6,15 @@
 //
 
 import UIKit
-//import SwiftUI
+
+protocol PostingDismissDelegate : AnyObject {
+    func closePosting()
+}
 
 //present modal sheet
-//Scroll
 class PostingItemViewController: UIViewController {
+    weak var delegate: PostingDismissDelegate?
+    
     lazy var navigationBar : UINavigationBar = {
         let navigationBar = UINavigationBar()
         navigationBar.translatesAutoresizingMaskIntoConstraints = false
@@ -104,10 +108,12 @@ class PostingItemViewController: UIViewController {
     }
     
     @objc func tapCancelButton() {
+        delegate?.closePosting()
         self.presentingViewController?.dismiss(animated: true)
     }
     
     @objc func tapDoneButton() {
+        delegate?.closePosting()
         self.presentingViewController?.dismiss(animated: true)
     }
     
@@ -178,19 +184,3 @@ class PostingItemViewController: UIViewController {
         }
     }
 }
-
-////Previews ===============================================================
-//struct PostingItemViewController_Previews: PreviewProvider {
-//    static var previews: some View {
-//        Container().edgesIgnoringSafeArea(.all)
-//    }
-//
-//    struct Container: UIViewControllerRepresentable {
-//        func makeUIViewController(context: Context) -> UIViewController {
-//            let postingItemViewController = PostingItemViewController()
-//            return UINavigationController(rootViewController: postingItemViewController)
-//        }
-//        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
-//        typealias UIViewControllerType = UIViewController
-//    }
-//}

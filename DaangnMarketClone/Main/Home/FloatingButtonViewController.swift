@@ -6,10 +6,9 @@
 //
 
 import UIKit
-import SwiftUI
 import SnapKit
 
-class FloatingButtonViewController: UIViewController {
+class FloatingButtonViewController: UIViewController, PostingDismissDelegate {
     lazy var cancelButton : UIButton = {
         if #available(iOS 15.0, *) {
             var config = UIButton.Configuration.plain()
@@ -84,13 +83,18 @@ class FloatingButtonViewController: UIViewController {
         setUI()
     }
     
+    func closePosting() {
+        self.presentingViewController?.dismiss(animated: true)
+    }
+    
     @objc func cancelPostingButton(_ sender: UIButton) {
-        self.presentingViewController?.dismiss(animated: false)
+        self.presentingViewController?.dismiss(animated: true)
     }
     
     @objc func myItemPostingButton(_ sender: UIButton) {
         let postingItemViewController = PostingItemViewController()
         postingItemViewController.modalPresentationStyle = .overFullScreen
+        postingItemViewController.delegate = self
         self.present(postingItemViewController, animated: true)
     }
     
@@ -112,23 +116,5 @@ class FloatingButtonViewController: UIViewController {
             $0.width.equalTo(200)
             $0.height.equalTo(56)
         }
-    }
-}
-
-//Previews ===============================================================
-struct PostingViewController_Previews: PreviewProvider {
-    static var previews: some View {
-        Container().edgesIgnoringSafeArea(.all)
-    }
-    
-    struct Container: UIViewControllerRepresentable {
-        func makeUIViewController(context: Context) -> UIViewController {
-            //SceneDelegate에서 처음에 HomeViewController를 보여주기 위해서 작업한 것과 비슷한 작업
-            //CollectionView 띄워주기
-            let postingViewController = FloatingButtonViewController()
-            return UINavigationController(rootViewController: postingViewController)
-        }
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
-        typealias UIViewControllerType = UIViewController
     }
 }
